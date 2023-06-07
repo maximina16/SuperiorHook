@@ -1,0 +1,10 @@
+import:
+    org.bukkit.Bukkit
+    com.bgsoftware.superiorskyblock.api.island.Island
+    com.bgsoftware.superiorskyblock.api.SuperiorSkyblockAPI
+
+condition leafwe %player% can build at %location%:
+    check:
+        set {_island} to SuperiorSkyblockAPI.getIslandAt(expr-2)
+        if {_island} = SuperiorSkyblockAPI.getPlayer(expr-1).getIsland():
+            continue
